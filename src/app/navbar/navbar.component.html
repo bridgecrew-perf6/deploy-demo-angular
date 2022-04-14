@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" style="display: flex; justify-content: space-between;">
+    <div>
+        <a mat-button routerLink="Trang chủ" class="nav-item"><mat-icon style="margin-right: 5px">home</mat-icon>Trang chủ</a>
+
+        <a mat-button routerLink="Thời sự" class="nav-item">Thời sự</a>
+        <a mat-button routerLink="Giải trí" class="nav-item">Giải trí</a>
+        <a mat-button routerLink="Kinh doanh" [matMenuTriggerFor]="kd" class="nav-item">Kinh doanh</a>
+
+        <mat-menu #kd="matMenu">
+            <a mat-menu-item>Doanh nghiệp</a>
+            <a mat-menu-item>Hàng hóa</a>
+            <a mat-menu-item class="bold">Kinh doanh BDS</a>
+        </mat-menu>
+
+        <a mat-button [matMenuTriggerFor]="mk" class="nav-item">Làm đẹp</a>
+        <mat-menu #mk="matMenu">
+            <a mat-menu-item [matMenuTriggerFor]="spa">Spa</a>
+        </mat-menu>
+
+        <mat-menu #spa="matMenu">
+            <a mat-menu-item [matMenuTriggerFor]="fd">Dưỡng da</a>
+            <mat-menu #fd="matMenu"> 
+                <a mat-menu-item>Phương pháp</a>
+                <a mat-menu-item>Chăm sóc</a>
+                <a mat-menu-item>Theo dõi</a>
+                <a mat-menu-item>Bình luận</a>
+                <a mat-menu-item>Bảng giá</a>
+            </mat-menu>
+        </mat-menu>
+        
+        <a mat-button routerLink="Tâm sự" class="nav-item">Tâm sự</a>  
+        <div class="spacer"></div>
+    </div>
+    <a mat-raised-button color="accent" routerLink="Đăng nhập" class="btn-login">Đăng nhập</a>
+</mat-toolbar>
+<router-outlet></router-outlet>

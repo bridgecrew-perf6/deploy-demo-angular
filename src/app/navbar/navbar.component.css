@@ -1,0 +1,17 @@
+.space{
+    flex: 1 1 auto;
+}
+a{
+    text-decoration: none !important;
+}
+.bold {
+    font-weight: bold;
+}
+.nav-item:hover {
+    color: white!important;
+
+    background-color: #152479!important;
+}
+.btn-login:hover{
+    opacity: 0.8;
+}
